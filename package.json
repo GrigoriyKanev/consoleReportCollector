@@ -14,9 +14,11 @@
             "import": "./dist/consoleReportCollector.esm.js",
             "require": "./dist/consoleReportCollector.cjs.js",
             "default": "./dist/consoleReportCollector.cjs.js",
-            "browser": "./dist/consoleReportCollector.min.js"
+            "browser": "./dist/consoleReportCollector.min.js",
+            "types": "./dist/consoleReportCollector.d.ts"
         },
-        "./package.json": "./package.json"
+        "./package.json": "./package.json",
+        "./dist/consoleReportCollector.d.ts": "./dist/consoleReportCollector.d.ts"
     },
     "scripts": {
         "build:ts": "tsc --outDir dist",
