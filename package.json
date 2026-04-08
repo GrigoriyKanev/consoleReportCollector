@@ -1,6 +1,6 @@
 {
     "name": "console-report-collector",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Collect console.error/log/warn entries and notify listeners",
     "main": "dist/consoleReportCollector.cjs.js",
     "module": "dist/consoleReportCollector.esm.js",
