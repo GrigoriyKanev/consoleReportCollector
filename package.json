@@ -1,0 +1,31 @@
+{
+    "name": "console-report-collector",
+    "version": "0.1.0",
+    "description": "Collect console.error/log/warn entries and notify listeners",
+    "main": "dist/consoleReportCollector.cjs.js",
+    "module": "dist/consoleReportCollector.esm.js",
+    "types": "dist/consoleReportCollector.d.ts",
+    "files": [
+        "dist"
+    ],
+    "unpkg": "dist/consoleReportCollector.min.js",
+    "exports": {
+        ".": {
+            "import": "./dist/consoleReportCollector.esm.js",
+            "require": "./dist/consoleReportCollector.cjs.js",
+            "default": "./dist/consoleReportCollector.cjs.js",
+            "browser": "./dist/consoleReportCollector.min.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "scripts": {
+        "build:ts": "tsc --outDir dist",
+        "build:esbuild": "esbuild consoleReportCollector.ts --bundle --platform=neutral --format=esm --outfile=dist/consoleReportCollector.esm.js --sourcemap && esbuild consoleReportCollector.ts --bundle --platform=neutral --format=cjs --outfile=dist/consoleReportCollector.cjs.js --sourcemap && esbuild consoleReportCollector.ts --bundle --platform=browser --format=iife --global-name=ConsoleReportCollector --minify --outfile=dist/consoleReportCollector.min.js --sourcemap",
+        "build": "npm run build:ts && npm run build:esbuild",
+        "typecheck": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "typescript": "^5.5.0",
+        "esbuild": "^0.18.0"
+    }
+}
