@@ -8,6 +8,7 @@
     "files": [
         "dist"
     ],
+    "license": "MIT",
     "unpkg": "dist/consoleReportCollector.min.js",
     "exports": {
         ".": {
